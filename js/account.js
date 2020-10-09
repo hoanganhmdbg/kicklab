@@ -18,7 +18,7 @@ async function checkAccount() {
     dataJson.map(item => {
         if (item.user == document.getElementById("form-id-login-username").value && item.password == document.getElementById("form-id-login-password").value) {
             localStorage.setItem("shoppingCart","[]");
-           window.location.pathname = 'index.html';          
+           window.location.pathname = 'kicklabpt/index.html';          
            localStorage.setItem("user",document.getElementById("form-id-login-username").value);
            document.getElementById('login').disabled = false;
            check =  true;
