@@ -10,10 +10,10 @@ var items = document.getElementsByClassName('items');
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("click", () => {
     if (localStorage.getItem("user") == null) {
-      window.location.pathname = "login.html";
+      window.location.pathname = "kicklabpt/login.html";
     } else {
       localStorage.setItem("index", i);
-      window.location.pathname = `product.html`;
+      window.location.pathname = `kicklabpt/product.html`;
     }
   })
 }

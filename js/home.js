@@ -1,5 +1,5 @@
 document.getElementById("shoppall").addEventListener("click", () => {
-  window.location.pathname = "allproduct.html";
+  window.location.pathname = "kicklabpt/allproduct.html";
 })
 function setUser() {
   var user_name = localStorage.getItem("user");
@@ -16,7 +16,7 @@ function setUser() {
 }
 setUser();
 document.getElementById("home_login").addEventListener("click", () => {
-  window.location.pathname = "login.html";
+  window.location.pathname = "kicklabpt/login.html";
 });
 document.getElementById("home_logout").addEventListener("click", () => {
   localStorage.removeItem("user");
@@ -64,7 +64,7 @@ document.getElementById("click-search").addEventListener("click" , () => {
     alert(`not found`);
   }else{
     localStorage.setItem("indexsearch",JSON.stringify(arr));
-    window.location.pathname = "search.html";
+    window.location.pathname = "kicklabpt/search.html";
   }
 });
 var items = document.getElementsByClassName('items');
@@ -73,10 +73,10 @@ console.log(items);
 for (let i = 0; i < items.length; i++) {
   items[i].addEventListener("click", () => {
     if (localStorage.getItem("user") == null) {
-      window.location.pathname = "login.html";
+      window.location.pathname = "kicklabpt/login.html";
     } else {
       localStorage.setItem("index", i);
-      window.location.pathname = `product.html`;
+      window.location.pathname = `kicklabpt/product.html`;
     }
 
   })
@@ -126,7 +126,7 @@ function deleteItem() {
   }
 }
 document.getElementById("view").addEventListener("click", () => {
-  window.location.pathname = "cart.html";
+  window.location.pathname = "kicklabpt/cart.html";
 });
 var user_name = localStorage.getItem("user");
 console.log(user_name);

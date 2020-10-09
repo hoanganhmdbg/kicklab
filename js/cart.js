@@ -25,5 +25,5 @@ document.getElementById("add-to-cart").addEventListener("click", () => {
     }
     addItemToCart(products_aboutshoe[index].name, products_aboutshoe[index].price, sizeChoose);
     alert("add successful");
-    window.location.pathname = "index.html";
+    window.location.pathname = "kicklabpt/index.html";
 });
