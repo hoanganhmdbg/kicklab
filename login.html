@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="contain">
+        <div class="left">
+            <img src="imgs/undraw_shopping_app_flsj.svg" alt="photos">
+        </div>
+        <div class="form_contain">
+            <form action="" class="form-Login" id="form-login">
+                <h3 class="heading">Sign in</h3>
+                <div class="space"></div>
+                <div class="form-group">
+                    <label for="user">UserName</label>
+                    <input type="text" name="user" placeholder="UserName" class="form-input" id="form-id-login-username" required>
+                    <span class="noti"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" placeholder="Password" class="form-input" id="form-id-login-password" required>
+                    <span class="noti"></span>
+                </div>
+                <span class="noti" id="wrong"></span>
+                <input type="submit" class="form-submit" value="Log in" id="login">
+                <input type="button" class="form-new" value="Create New Account" id="new">
+            </form>
+            <form action="" class="form-Signup" id="form-signup">
+                <h3 class="heading">Sign Up</h3>
+                <div class="space"></div>
+                <div class="form-group">
+                    <label for="user">FullName</label>
+                    <input type="text" name="user" placeholder="FullName" class="form-input" id="form-id-fullname" required>
+                    <span class="noti"></span>
+                </div>
+                <div class="form-group">
+                    <label for="user">UserName</label>
+                    <input type="text" name="user" placeholder="UserName" class="form-input" id="form-id-username" required>
+                    <span class="noti" id="noti-user"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">PassWord</label>
+                    <input type="password" name="password" placeholder="Enter a new password" class="form-input" id="form-id-password" required> 
+                    <span class="noti"></span>
+                </div>
+                <div class="form-group">
+                    <label for="password">Comfirm PassWord</label>
+                    <input type="password" name="password" placeholder="Comfirm password" class="form-input" id="form-id-confirm-password" required>
+                    <span class="noti" id="noti-confirm"></span>
+                </div>
+                <input type="submit" class="form-new" value="Sign Up">
+                
+                <p class="text" id="back">already a member</p>
+            </form>
+
+        </div>
+        
+    </div>
+    <script src="js/account.js"></script>
+</body>
+<script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+</html>

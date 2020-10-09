@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    color: #333;
+    font-size: 62.5%;
+    font-family: "Open Sans", sans-serif;
+}
+.contain{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f1f1f1;
+    display: flex;
+}
+.contain .left{
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+.contain .left img{
+    width: 500px;
+    height: auto;
+}
+.form_contain{
+    width: 360px;
+    padding: 32px 24px;
+    margin-left: 400px;
+    margin: 100px 0 0 400px;
+    text-align: center;
+    background-color: #fff;
+    font-size: 1.6rem;
+    height: 500px;
+}
+.form_contain .heading{
+    font-size: 2.5rem;
+}
+.space{
+    margin-top: 20px;
+}
+.form_contain .form-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+.form_contain .form-group label{
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 700;
+    line-height: 2rem;
+}
+.form_contain .form-group .form-input{
+    height: 40px;
+    padding: 8px 12px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #b3b3b3;
+}
+.form_contain .form-Login .form-submit{
+    background-color: #1dbfaf;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    border: 1px solid #b3b3b3;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form_contain .form-Login .form-submit:hover {
+    background-color: #1ac7b6;
+  }
+  
+.form-Login{
+    position: relative;
+}
+.form-Login::after{
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    background-color: darkgrey;
+    top: 350;
+    right: 0;
+}
+.form_contain .form-Login .form-new{
+    background-color: #3498db;
+    outline: none;
+    width: 50%;
+    margin-top: 20px;
+    height: 40px;
+    border: 1px solid #b3b3b3;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form_contain .form-Login .form-new:hover{
+    background-color: #0984e3;
+}
+.form-Signup .form-new{
+    background-color: #1dbfaf;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #b3b3b3;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-Signup .form-new:hover{
+    background-color: #1ac7b6;
+}
+.form-Signup .text{
+    font-size: 1.2rem;
+    text-align: right;
+    cursor: pointer;
+}
+.form-Signup .text:hover{
+    text-decoration: underline;
+}
+.form-Signup{
+    display: none;
+}
+.noti{
+    height: 20px;
+    text-align: left;
+    font-size: 13px;
+    color: red;
+}   

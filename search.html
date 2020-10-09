@@ -1,0 +1,91 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KICKS-LAB: NỀN TẢNG MUA BÁN, KÝ GỬI SNEAKERS, STREETWEAR</title>
+    <link rel="icon" href="https://i.pinimg.com/564x/f4/ce/0b/f4ce0be44971b7a2fefd0a6efce218fc.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/shopall.css">
+</head>
+
+<body>
+    <script src="js/data.js"></script>
+    <div class="container">
+        <div id="header">
+            <div id="store-name">
+                <a href="index.html"><img
+                        src="https://scontent.fhan2-4.fna.fbcdn.net/v/t1.0-9/28279553_2025689041044464_3816117084316762112_n.jpg?_nc_cat=105&_nc_sid=09cbfe&_nc_ohc=ljY7nM2BpdYAX_mtFnp&_nc_ht=scontent.fhan2-4.fna&oh=141e4dabd05d726f3257e18dcb8a640c&oe=5FA052EA"
+                        alt=""></a>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li class="item" id="shoppall" style="cursor: pointer;">Shop All</li>
+                    <!-- <li id="button"><i class="fas fa-search"></i></a></li> -->
+                    <!-- <li id="button1"><a href="#"><i class="fas fa-search"></i></a></li> -->
+
+                </ul>
+            </div>
+        </div>
+        <div id="body-content">
+            <div id="list-of-products">
+            </div>
+        </div>
+        <div id="footer">
+            <div id="support">
+                <ul>
+                    <li>Service & Support</li>
+                    <li><a href="#">kickslabvn@gmail.com</a></li>
+                    <li><a href="#">+84945378809</a></li>
+                    <li><a href="#">Locations</a></li>
+                </ul>
+            </div>
+            <div id="info">
+                <ul>
+                    <li>Info</li>
+                    <li><a href="#">Consignment Terms</a></li>
+                    <li><a href="#">Connect with Us</a></li>
+                    <li><a href="#">Delivery and Returns</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+            <div id="followus">
+                <ul>
+                    <li>Follow Us</li>
+                    <li><i class="fab fa-facebook-square"></i><a href="#">Facebook</a></li>
+                    <li><i class="fab fa-instagram-square"></i><a href="#">Instagram</a></li>
+                    <li><i class="fab fa-youtube"></i><a href="#">Youtube</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("shoppall").addEventListener("click", () => {
+            window.location.pathname = "allproduct.html";
+        })
+        let a = JSON.parse(localStorage.getItem("indexsearch"));
+        for (let i = 0; i < a.length; i++) {
+            let x = document.getElementById("list-of-products");
+            x.insertAdjacentHTML('beforeend', `<div class="items">
+             <div>${products_aboutshoe[a[i]].image[0]}</div>
+            <div class="name-of-shoes">${products_aboutshoe[a[i]].name}</div>
+            <div class="price-of-shoes">${products_aboutshoe[a[i]].price}</div>
+            </div>`);
+        }
+        var items = document.getElementsByClassName('items');
+        for (let i = 0; i < items.length; i++) {
+            items[i].addEventListener("click", () => {
+                if (localStorage.getItem("user") == null) {
+                    window.location.pathname = "login.html";
+                } else {
+                    localStorage.setItem("index", a[i]);
+                    window.location.pathname = `product.html`;
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
