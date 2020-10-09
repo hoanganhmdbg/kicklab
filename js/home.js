@@ -55,7 +55,7 @@ for (let i = 0; i < 8; i++) {
 document.getElementById("click-search").addEventListener("click" , () => {
   let search = document.getElementById("search").value;
   let arr = [];
-  for (let i = 0; i < products_aboutshoe.length; i++) {
+  for (let i = 0; i < products_aboutshoe.length; i++){
     if(products_aboutshoe[i].name.includes(search)){
       arr.push(i);
     }
